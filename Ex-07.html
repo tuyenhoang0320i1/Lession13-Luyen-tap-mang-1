@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7:</title>
+</head>
+<body>
+<script>
+
+    let number = new Array();
+
+    function inputArray(number) {
+        let N = +prompt(" Enter sum of Elements in Array: ");
+        for (i = 0; i < N; i++) {
+            number[i] = Math.floor(Math.random() * 15);
+            // number[i] = +prompt("Enter ever Element: ");
+        }
+    }
+
+    function displayArray(number) {
+        document.write("Your array is: ");
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ");
+        }
+    }
+
+    function checkAndRemoveArray(number) {
+        document.write("<br/> Array then remove Element: ");
+        let V = +prompt(" Enter a Element want check then remove");
+        for (i = 0; i < number.length; i++) {
+            if (V == number[i]) {
+                number.splice(i, 1);
+            }
+            document.write(number[i] + ", ");
+        }
+    }
+
+    inputArray(number);
+    displayArray(number);
+    checkAndRemoveArray(number);
+</script>
+</body>
+</html>

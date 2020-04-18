@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: </title>
+</head>
+<body>
+<script>
+    let number = [];
+
+    function inputArray() {
+        let N = +prompt(" Enter sum of Element: ");
+        for (i = 0; i < N; i++) {
+            number[i] = Math.floor(Math.random() * 10);
+        }
+    }
+
+    function displayArray() {
+        document.write(" Array added is: ");
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ");
+        }
+    }
+
+    function sortArrayLowwer() {
+        document.write("<br/>Array then sort to lowwer: ");
+        number.sort(function (a, b) {
+            return b - a;
+        });
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ");
+        }
+
+    }
+
+    inputArray(number);
+    displayArray(number);
+    sortArrayLowwer(number);
+</script>
+</body>
+</html>

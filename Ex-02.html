@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Hiển thị giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+
+    let number = new Array();
+
+    function inputSumOfElement(number) {
+        let N = +prompt("Enter sum of Elements you want print: ");
+        for (let i = 0; i < N; i++) {
+            number[i] = Math.floor(Math.random()*15)
+        }
+    }
+
+    function displayArray(number) {
+        document.write("Elements you added: ");
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ")
+        }
+    }
+
+    function findMaxOfArray(number) {
+        let max = number[0];
+        let index = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] > max) {
+                max = number[i];
+                index = i;
+            }
+        }
+        document.write("<br/>Elements max of Array is: " + max + " at position " + index);
+    }
+
+        inputSumOfElement(number);
+        displayArray(number);
+        findMaxOfArray(number)
+
+</script>
+</body>
+</html>

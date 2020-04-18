@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra phan tu co trong mang khong</title>
+</head>
+<body>
+<script>
+
+    let arrayA = [];
+
+    function inputArrayA(arrayA) {
+        let N = +prompt("Enter arrayA: ");
+        let i = 0;
+        while (i < N) {
+            arrayA[i] = Math.floor(Math.random() * 10);
+            i++;
+        }
+    }
+
+    function displayArrayA(arrayA) {
+        document.write("<br/>arrayA is: ");
+        let i = 0;
+        while (i < arrayA.length) {
+            document.write(arrayA[i] + ", ");
+            i++;
+        }
+    }
+
+    let arrayB = [];
+
+    function inputArrayB(arrayB) {
+        let N1 = +prompt("Enter arrayB: ");
+        let j = 0;
+        while (j < N1) {
+            arrayB[j] = Math.floor(Math.random() * 10);
+            j++;
+        }
+    }
+
+    function displayArrayB(arrayB) {
+        document.write("<br/>arrayB is: ");
+        let j = 0;
+        while (j < arrayB.length) {
+            document.write(arrayB[j] + ", ");
+            j++;
+        }
+    }
+
+    let arrayC = [];
+
+    function inputArrayC(arrayC) {
+        let N2 = +prompt("Enter arrayC: ");
+        let k = 0;
+        while (k < N2) {
+            arrayC[k] = Math.floor(Math.random() * 10);
+            k++;
+        }
+    }
+
+    function displayArrayC(arrayC) {
+        document.write("<br/>arrayC is: ");
+        let k = 0;
+        while (k < arrayC.length) {
+            document.write(arrayC[k] + ", ");
+            k++;
+        }
+    }
+
+    function concatArray() {
+        document.write("<br/> New ArrayD then concat: ");
+        let arrayD = [].concat(arrayA, arrayB, arrayC).sort();
+        document.write(arrayD + ", ");
+    }
+
+    inputArrayA(arrayA);
+    displayArrayA(arrayA);
+    inputArrayB(arrayB);
+    displayArrayB(arrayB);
+    inputArrayC(arrayC);
+    displayArrayC(arrayC);
+    concatArray();
+
+</script>
+</body>
+</html>

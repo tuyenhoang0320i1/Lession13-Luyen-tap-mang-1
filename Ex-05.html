@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Viết chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+
+<script>
+    function inputArray(number) {
+        let N = +prompt("Sum of quantity element want to print: ");
+        for (let i = 0; i < N; i++) {
+            // number[i] = Math.floor(Math.random()*(-3));
+            number[i] = +prompt("Enter ever Elements: ");
+        }
+    }
+
+    function displayArray(number) {
+        document.write("Element added: " );
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ");
+        }
+    }
+
+    function countIntNegative(number) {
+
+        let count = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] < 0) {
+                document.write("<br/>");
+                count++;
+            }
+
+        }
+        document.write("<br/>Element IntNegativeNumber is: " + count);
+    }
+
+
+    let number = new Array();
+    inputArray(number);
+    displayArray(number);
+    countIntNegative(number);
+</script>
+</body>
+</html>

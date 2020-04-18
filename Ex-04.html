@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: </title>
+</head>
+<body>
+<script>
+    let number = new Array();
+
+    function inputArray(number) {
+        let N = +prompt("Enter sum of Elements: ");
+        for (i = 0; i < N; i++) {
+            // number[i] = +prompt("Enter ever Element: ");
+            number[i] = Math.floor(Math.random() * 10);
+        }
+    }
+
+    function displayArray(number) {
+        document.write("Elements added: ");
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ");
+        }
+        document.write ("<br/>Reverse Array is: "+ (number.reverse(number)));
+    }
+
+    inputArray(number);
+    displayArray(number);
+</script>
+</body>
+</html>

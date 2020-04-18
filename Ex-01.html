@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+<script>
+
+
+    function inputArray(number) {
+        let N = +prompt("Sum of quantity element want to print: ");
+        for (let i = 0; i < N; i++) {
+            number[i] = Math.floor(Math.random()*15);
+
+        }
+    }
+
+    function displayArray(number) {
+        document.write("Element added: " );
+        for (i = 0; i < number.length; i++) {
+            document.write(number[i] + ", ");
+        }
+    }
+    
+    function filterElementGreater10(number) {
+        document.write("<br/>Element greater and equal 10 is: ");
+        for (let i = 0; i < number.length; i++) {
+            if (10 <= number[i]) {
+                document.write(number[i] + ", ");
+            }
+        }
+    }
+
+    let number = new Array();
+    inputArray(number);
+    displayArray(number);
+   filterElementGreater10(number);
+
+
+</script>
+</body>
+</html>
